@@ -1,0 +1,79 @@
+.services {
+  padding: 0 3rem 0 3rem;
+  display: flex;
+  height: 60vh;
+  &-left {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    a {
+      text-decoration: none;
+    }
+    &_span1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: var(--black);
+    }
+    &_span2 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: var(--orange);
+    }
+    &_span3 {
+      font-size: 14px;
+      color: var(--gray);
+    }
+    &_span4 {
+      font-size: 16px;
+      color: var(--gray);
+    }
+    &_blur {
+      position: absolute;
+      width: 22rem;
+      height: 14rem;
+      border-radius:  50%;
+      background: #edd0ff;
+      filter: blur(72px);
+      z-index: -9;
+      top: 0;
+      left: 0;
+    }
+    &_button {
+      width: 8rem;
+      height: 2rem;
+      margin-top: 1rem;
+      font-size: 16px;
+    }
+  }
+  &-right {
+    position: relative;
+    &_blur {
+      position: absolute;
+      width: 22rem;
+      height: 14rem;
+      border-radius:  50%;
+      background: #edd0ff;
+      filter: blur(72px);
+      z-index: -9;
+      top: 17rem;
+      left: 22rem;
+    }
+  }
+}
+@media screen and (max-width: 480px){
+  .services {
+    margin-top: 0;
+    flex-direction: column;
+    gap: 5rem;
+    height: 60rem;
+    padding: 0;
+    &-right {
+      display: flex;
+      flex-direction: column;
+      gap: 5rem;
+      & * {
+        position: static !important;
+      }
+    }
+  }
+}

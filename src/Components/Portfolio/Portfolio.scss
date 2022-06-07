@@ -1,0 +1,80 @@
+.portfolio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 70vh;
+  position: relative;
+  &-one {
+    color: var(--black);
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  &-two {
+    color: var(--orange);
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  &-container {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    &_item {
+      width: 220px;
+      height: 150px;
+      border-radius: 20px;
+      border: 2px solid var(--orangeCard);
+      margin: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gray);
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      h3 {
+        position: absolute;
+        font-size: 20px;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+        border-radius: 20px;
+        transition: all .5s ease;
+      }
+      &:hover {
+        background: var(--orangeCard);
+        img {
+          opacity: .2;
+          z-index: 0;
+        }
+      }
+    }
+  }
+  .blur {
+    position: absolute;
+    width: 22rem;
+    height: 14rem;
+    border-radius:  50%;
+    filter: blur(72px);
+    z-index: -9;
+  }
+  &-blur1 {
+    right: 0;
+    top: 0;
+  }
+  &-blur2 {
+    top: 7rem;
+    left: 5rem;
+  }
+}
+@media screen and (max-width: 480px){
+  .portfolio {
+    height: 100vh;
+  }
+}

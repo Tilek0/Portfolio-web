@@ -1,0 +1,72 @@
+.contact {
+  padding: 0 3rem;
+  display: flex;
+  height: 70vh;
+  margin-top: 4rem;
+  .blur {
+    position: absolute;
+    width: 22rem;
+    height: 14rem;
+    border-radius:  50%;
+    filter: blur(72px);
+    z-index: -9;
+  }
+  &-left {
+    &_side {
+      display: flex;
+      flex-direction: column;
+      &_one {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: var(--black);
+      }
+      &_two {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: var(--orange);
+      }
+      &__blur {
+        top: auto;
+        left: 2rem;
+      }
+    }
+  }
+  &-right {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    flex: 1;
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      align-items: center;
+      textarea {
+        height: 4rem !important;
+      }
+    }
+    &_input {
+      width: 20rem;
+      height: 2rem;
+      padding: .3em;
+      outline: none;
+      border: 2px solid var(--orange);
+      border-radius: 8px;
+      font-size: 16px;
+    }
+    &_button {
+      width: 6rem;
+    }
+    &_blur {
+      top: 3rem;
+      right: 7rem;
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  .contact {
+    height: 65vh;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}

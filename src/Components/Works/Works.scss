@@ -1,0 +1,89 @@
+.right {
+  position: relative;
+ &-mainCircle {
+   position: relative;
+   left: 9rem;
+   width: 18rem;
+   height: 18rem;
+   border-radius: 100%;
+   box-shadow: var(--smboxShadow);
+   top: 2rem;
+   background: white;
+   & * {
+     position: absolute;
+   }
+   .one {
+     top: -3rem;
+     left: 6rem;
+   }
+   .two {
+     top: 5.5rem;
+     left: -3rem;
+   }
+   .three {
+     top: 5.5rem;
+     left: 6rem;
+   }
+   .four {
+     top: 5.5rem;
+     left: 15rem;
+   }
+   .five {
+     top: 14rem;
+     left: 6rem;
+   }
+   &_secCircle {
+     width: 6rem;
+     height: 6rem;
+     border-radius: 100%;
+     position: absolute;
+     border: 5px solid #ebebeb;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     background: white;
+     box-shadow: var(--smboxShadow);
+     img {
+       transform: scale(.6);
+     }
+   }
+ }
+  &-backCircle {
+    position: absolute;
+    height: 13rem;
+    width: 13rem;
+    border-radius: 100%;
+    z-index: -1;
+  }
+  .blueCircle {
+    background:  #1949b8;
+    left: 18rem;
+    top: 0;
+  }
+  .yellowCircle {
+    background: #F5C32C;
+    left: 18rem;
+    top: 8rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(.8 );
+    &-mainCircle {
+      left: 0;
+    }
+    &-backCircle {
+      left: 8rem;
+    }
+    .blueCircle {
+      left: 15rem;
+    }
+    .yellowCircle {
+      background: #F5C32C;
+      left: 15rem;
+    }
+  }
+}

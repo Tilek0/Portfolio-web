@@ -1,0 +1,102 @@
+.intro {
+  display: flex;
+  height: 77vh;
+  margin-top: 8rem;
+  &-left {
+    display: flex;
+   position: relative;
+    flex: 1;
+    flex-direction: column;
+    gap: 2rem;
+    &_name {
+      display: flex;
+      flex-direction: column;
+        &_one{
+          color: var(--black);
+          font-weight: bold;
+          font-size: 3rem;
+        }
+        &_two{
+          height: 65px;
+          span {
+            color: var(--orange);
+            font-weight: bold;
+            font-size: 3rem;
+          }
+        }
+        &_three{
+          color: var(--gray);
+          font-weight: 100;
+          font-size: 16px;
+          margin-top: 10px;
+        }
+    }
+    &_button {
+      width: 6rem;
+      height: 2rem;
+    }
+    &-icons {
+      margin-top: 3rem;
+      display: flex;
+      gap: 0;
+      img {
+        transform: scale(.5);
+        cursor: pointer;
+      }
+    }
+  }
+  &-right {
+    flex: 1;
+    position: relative;
+    img {
+      position: absolute;
+      z-index: 1;
+    }
+    &_img1 {
+      transform: scale(.69);
+      top: -9%;
+      left: -15%;
+    }
+    &_img2 {
+      transform: scale(.67);
+      top: -4.6rem;
+      left: -3rem;
+    }
+    &_img3 {
+      transform: scale(1.4);
+      left: 20%;
+      top: .7%;
+    }
+    &_img4 {
+      transform: scale(.6);
+      left: -19%;
+      top: -12%;
+      border-radius: 50%;
+    }
+    &_blur {
+      position: absolute;
+      width: 22rem;
+      height: 14rem;
+      border-radius:  50%;
+      background: #edd0ff;
+      filter: blur(72px);
+      z-index: -9;
+      top: -12%;
+      left: 45%;
+    }
+  }
+}
+@media screen and (max-width: 480px){
+  .intro {
+    flex-direction: column;
+    height: 64rem;
+    gap: 7rem;
+    &-right {
+      transform: scale(.8);
+      left: -3rem;
+      &_blur {
+        display: none;
+      }
+    }
+  }
+}
