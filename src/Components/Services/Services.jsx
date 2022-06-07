@@ -11,7 +11,7 @@ const Services = () => {
   const transition = {duration: 2, type: 'spring'}
   const theme = useContext(ThemeContext)
   const darkMode = theme.state.darkMode
-  let resume = "https://drive.google.com/file/d/1ZBwW-wexFEFTCsQ1nzNvX7FWwzwaG_46/view?usp=drivesdk"
+  let resume = "https://drive.google.com/file/d/1zfFGTEJvj4XhgXpxfYxJKWVmPzFlJ-Mi/view?usp=sharing"
   return (
     <div className="services" id='Services'>
       <div className="services-left">
