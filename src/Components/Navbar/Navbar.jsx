@@ -2,10 +2,20 @@ import './Navbar.scss'
 import Toggle from "./toggle/toggle";
 import {Link} from 'react-scroll'
 import HamburgerMenu from "./HumburgerMenu/HumburgerMenu";
+import {useState} from "react";
 
 const Navbar = () => {
+  const [navbar,setNavbar] = useState()
+  const scrollHandle = () => {
+    if (window.scrollY >= 120) {
+      setNavbar(true)
+    } else {
+      setNavbar(false)
+    }
+  }
+  window.addEventListener('scroll', scrollHandle)
   return (
-    <div className="wrapped">
+    <div className="wrapped" style={{background: navbar ? 'var(--gray)' : ''}}>
       <div className="wrapped-left">
         <div className="wrapped-left_name">Tilek</div>
         <Toggle/>
