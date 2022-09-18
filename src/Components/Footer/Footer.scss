@@ -17,6 +17,11 @@
     &_icons {
       display: flex;
       gap: 2rem;
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
     }
   }
 }

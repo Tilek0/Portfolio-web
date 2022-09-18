@@ -1,7 +1,7 @@
 import './Intro.scss'
 import githubImg from '../../assets/img/github.png'
 import linkedInImg from '../../assets/img/linkedin.png'
-import instagramImg from '../../assets/img/instagram.png'
+import telegramImg from '../../assets/img/telegram.png'
 import vector1 from '../../assets/img/Vector1.png'
 import vector2 from '../../assets/img/Vector2.png'
 import boy from '../../assets/img/boy.png'
@@ -25,7 +25,7 @@ const Intro = () => {
       {
         showCursor: false,
         backDelay: 1500,
-        strings: ['Tilek Talant Uulu', 'Web Developer']
+        strings: ['Tilek Moldaliev', 'Web Developer']
       })
   }, [])
   return (
@@ -48,8 +48,8 @@ const Intro = () => {
           <a href="https://www.linkedin.com/in/tilek-talant-uulu-aab343227">
             <img src={linkedInImg} alt="#"/>
           </a>
-          <a href="https://www.instagram.com/tilek07/">
-            <img src={instagramImg} alt="#"/>
+          <a href="https://t.me/Tilek_07">
+            <img src={telegramImg} alt="#"/>
           </a>
         </div>
       </div>
